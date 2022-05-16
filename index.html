@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/choices.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ad606342-f4b0-46f5-a474-71949f25f54c&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <title>Project</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="./index.html" class="logo">
+              <img src="img/logo.png" alt="logo" />
+            </a>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a href="#dishes" class="nav__link">Заказы</a>
+              </li>
+              <li class="nav__item">
+                <a href="./menu.html" class="nav__link">Меню</a>
+              </li>
+              <li class="nav__item">
+                <a href="#booking" class="nav__link">Заказ столика</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main" id="main">
+      <div class="container">
+        <div class="main__wrapper">
+          <div class="main__top">
+            <img class="main__img" src="img/main-top1.jpeg" alt="main" />
+            <img class="main__logo" src="img/logo.png" alt="logo" />
+          </div>
+          <div class="main__bottom">
+            <img
+              class="main__img main__img_half"
+              src="img/main-top1.jpeg"
+              alt="main"
+            />
+            <div class="main__dev">
+              <h1>Наш девиз</h1>
+              <p>Приятного аппетита другим отрядам!</p>
+              <p>Мы рады видеть вас сегодня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="dishes" id="dishes">
+      <div class="container">
+        <div class="dishes__wrapper">
+          <h2>Фирменные блюда</h2>
+          <h3>Гарантия свежести</h3>
+
+          <div class="dishes__block">
+            <div class="dishes__card">
+              <div>
+                <img src="img/povar.jpeg" alt="povar" />
+              </div>
+              <div class="dishes__content">
+                <h4>Блюдо от шефа</h4>
+                <p>Всегда в наличий</p>
+                <a href="./chef.html">Узнать больше</a>
+              </div>
+            </div>
+            <div class="dishes__card">
+              <div><img src="img/booking.jpeg" alt="povar" /></div>
+              <div class="dishes__content">
+                <h4>Bakery</h4>
+                <p>Идеальный вариант</p>
+                <a href="./menu.html">Узнать больше</a>
+              </div>
+            </div>
+            <div class="dishes__card">
+              <div class="break">
+                <img src="img/breakfast.jpeg" alt="povar" />
+              </div>
+              <div class="dishes__content">
+                <h4>Breakfast</h4>
+                <p>Всегда в наличий</p>
+                <a href="./breakfast.html">Узнать больше</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__wrapper">
+          <div class="contacts__img">
+            <h2 class="contacts__title">Контакты</h2>
+            <form class="form">
+              <label for="#"
+                ><span>Имя</span>
+                <input
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Введите свое имя"
+                />
+              </label>
+              <label for="#">
+                <span>Почта</span>
+                <input
+                  name="mail"
+                  type="mail"
+                  required
+                  placeholder="Введите свою почту"
+                />
+              </label>
+              <label for="#">
+                <span>Тема</span>
+                <input
+                  name="message"
+                  type="text"
+                  required
+                  placeholder="Укажите тему"
+                />
+              </label>
+              <label for="#">
+                <span>Сообщение</span>
+                <textarea placeholder="Введите свое сообщение"> </textarea>
+              </label>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="container">
+        <div class="map__wrapper">
+          <div id="map" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+      <div class="container">
+        <div class="booking__wrapper">
+          <h2 class="booking__title">Забронируйте столик</h2>
+          <div class="booking__form">
+            <form action="#">
+              <select class="choice">
+                <option selected>Выберите дату</option>
+                <option value="1">Сегодня</option>
+                <option value="2">Завтра</option>
+                <option value="3">Послезавтра</option>
+                <option value="4">На этой недел</option>
+                <option value="5">На следющей</option>
+                <option value="6">Когда нибудь</option>
+              </select>
+
+              <select class="choice" aria-label="Default select example">
+                <option selected>Выберите время</option>
+                <option value="1">Утром</option>
+                <option value="2">В обед</option>
+                <option value="3">Вечером</option>
+              </select>
+
+              <select class="choice" aria-label="Default select example">
+                <option selected>Количество человек</option>
+                <option value="1">До - 2х</option>
+                <option value="2">До - 5</option>
+                <option value="3">От - 5</option>
+              </select>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Отправить
+              </button>
+            </form>
+          </div>
+
+          <div class="booking__img hours">
+            <h4 class="hours__title">Часы работы</h4>
+            <h5 class="hours__subtitle">Еда в ресторане и на вынос</h5>
+            <p class="hours__days">ПН - СБ:09-22</p>
+            <p class="hours__subdays">ВС:09-22</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Ваша заявка была принята</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
